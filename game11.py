@@ -30,11 +30,11 @@ enemyX = []
 enemyY = []
 enemyX_change = []
 enemyY_change = []
-num_of_enemies = 6
+num_of_enemies = 5
 
 for i in range(num_of_enemies):
     enemyImg.append(pygame.image.load('ufo.png'))
-    enemyX.append(random.randint(0, 800))
+    enemyX.append(random.randint(0, 735))
     enemyY.append(random.randint(50, 150))
     enemyX_change.append(4)
     enemyY_change.append(40)
@@ -68,8 +68,7 @@ def isCollision(enemyX, enemyY, bulletX, bulletY):
 # Game loop
 running = True
 while running:
-
-    # RGB = Red, Green, Blue
+    
     screen.fill((0,0,0))
     # Background image
     screen.blit(background, (0,0))
@@ -133,5 +132,4 @@ while running:
         bulletY -= bulletY_change
 
     player(playerX, playerY)
-    
     pygame.display.update()
